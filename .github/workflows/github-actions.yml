@@ -20,6 +20,13 @@ jobs:
       - run: (cd mashup && npm install)
       - name: Check our linter for errors
         run: (cd mashup && npm run lint)
-
+  Check-For-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: (cd unittesting && npm install)
+      - name: Check our unit tests
+        run: (cd unittesting && npm run test)
 
 
