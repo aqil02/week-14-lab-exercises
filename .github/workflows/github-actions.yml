@@ -7,7 +7,7 @@ jobs:
     env:
       working-directory-insecure: ./insecure
     steps:
-      - run: find src
+      - run: ls -lah
       - run: (cd insecure && npm install)
       - run: echo "NPM is now checking for vulnerabilities"
       - run: (cd insecure && npm audit)
