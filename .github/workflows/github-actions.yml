@@ -17,9 +17,9 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Check our linter for errors
       - run: (cd mashup && npm install)
-      - run: (cd mashup && npm run lint)
+      - name: Check our linter for errors
+        run: (cd mashup && npm run lint)
 
 
 
