@@ -7,9 +7,7 @@ jobs:
     env:
       working-directory-insecure: ./insecure
     steps:
-      - run: npm install
-        working-directory: ${{env.working-directory-insecure}}
+      - run: (cd insecure && npm install)
       - run: echo "NPM is now checking for vulnerabilities"
-      - run: npm audit
-        working-directory: ${{env.working-directory-insecure}}
+      - run: (cd insecure && npm audit)
 
