@@ -3,6 +3,7 @@ run-name: ${{ github.actor }} is checking Lab 14 for pre-defined compliance and 
 on: [push]
 jobs:
   Check-For-NPM-ISSUES:
+    runs-on: ubuntu-latest
     steps:
       - run: npm install
       - run: echo "NPM is now checking for vulnerabilities"
