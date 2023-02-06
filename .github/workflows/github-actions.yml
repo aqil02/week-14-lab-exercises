@@ -1,0 +1,11 @@
+name: Github Actions for Lab 14
+run-name: ${{ github.actor }} is checking Lab 14 for pre-defined compliance and general issues
+on: [push]
+jobs:
+  Check-For-NPM-ISSUES:
+    steps:
+      - run: npm install
+      - run: echo "NPM is now checking for vulnerabilities"
+      - run: cd insecure
+      - run: npm audit
+
