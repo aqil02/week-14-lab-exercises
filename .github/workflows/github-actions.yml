@@ -7,6 +7,8 @@ jobs:
     env:
       working-directory-insecure: ./insecure
     steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
       - run: ls -lah
       - run: (cd insecure && npm install)
       - run: echo "NPM is now checking for vulnerabilities"
