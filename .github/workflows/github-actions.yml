@@ -6,8 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: npm install
-        working-directory: insecure
+        working-directory: ../insecure
       - run: echo "NPM is now checking for vulnerabilities"
       - run: npm audit
-        working-directory: insecure
+        working-directory: ../insecure
 
