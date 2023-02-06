@@ -5,7 +5,9 @@ jobs:
   Check-For-NPM-ISSUES:
     runs-on: ubuntu-latest
     steps:
-      - run: (cd insecure && npm install)
+      - run: npm install
+        working-directory: ./insecure
       - run: echo "NPM is now checking for vulnerabilities"
-      - run: (cd insecure && npm audit)
+      - run: npm audit
+        working-directory: ./insecure
 
