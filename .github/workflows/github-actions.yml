@@ -4,10 +4,12 @@ on: [push]
 jobs:
   Check-For-NPM-ISSUES:
     runs-on: ubuntu-latest
+    env:
+      working-directory-insecure: ./insecure
     steps:
       - run: npm install
-        working-directory: ../insecure
+        working-directory: ${{env.working-directory-insecure}}
       - run: echo "NPM is now checking for vulnerabilities"
       - run: npm audit
-        working-directory: ../insecure
+        working-directory: ${{env.working-directory-insecure}}
 
