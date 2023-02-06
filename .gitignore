@@ -182,3 +182,9 @@ tags
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/vim,visualstudiocode,node
+.idea/inspectionProfiles/Project_Default.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/week-14-lab-exercises.iml
+package-lock.json
+.idea/workspace.xml
